@@ -1,0 +1,94 @@
+Jared Raiola Test Scenario
+
+0-Server Not Running
+
+1-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -u 0.0.0.0 13000 "Server isn't running, this won't work"
+
+	Output:                             
+	Server Not Found. Exiting...
+
+2-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -d 0.0.0.0 13000
+
+	Output:
+	Server Not Found. Exiting...
+
+3-
+	Input:
+	-bash-4.1$ python3 ttweetser.py 13000
+
+	Output:
+	Please have client connect to IP: 130.207.114.27 and PORT: 13000
+
+4-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -d 0.0.0.0 13000
+
+	Output:
+	Message Downloaded.
+	Message: "Empty Message"
+
+5-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -u 0.0.0.0 13000 "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"
+
+	Output:
+	You have exceeded the 150 character limit. Please shorten your message by 30 characters.
+
+6-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -d 0.0.0.0 13000
+
+	Output:
+	Message Downloaded.
+	Message: "Empty Message"
+
+7-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -u 0.0.0.0 13000 "TCP stands for Training Cute Puppies"
+
+	Output:
+	Message Sent.
+	Message Stored On Server.
+
+8-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -d 0.0.0.0 13000
+
+	Output:
+	Message Downloaded.
+	Message: "TCP stands for Training Cute Puppies"
+
+9-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -u 0.0.0.0 13000 "No, TCP stands for TA's Can Party"
+
+	Output:
+	Message Sent.
+	Message Stored On Server.
+
+10-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -d 0.0.0.0 13000
+
+	Output:
+	Message Downloaded.
+	Message: "No, TCP stands for TA's Can Party"
+
+11-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -u 0.0.0.0 13000 "abcdefghijklmnopqrstuvwxyzabcdefghijklmnpqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+
+	Output:
+	You have exceeded the 150 character limit. Please shorten your message by 31 characters.
+
+12-
+	Input:
+	-bash-4.1$ python3 ttweetcli.py -d 0.0.0.0 13000
+
+	Output:
+	Message Downloaded.
+	Message: "No, TCP stands for TA's Can Party"
